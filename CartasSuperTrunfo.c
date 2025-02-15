@@ -27,11 +27,16 @@ int main() {
     printf ("Informe a área da cidade:\n");
     scanf ("%f", &area);
 
+    float densidadeP = (float) pop / area;
+    float PIBC = (float) PIB / pop;
+
     printf("Nome da cidade: %s\n", city);
     printf("Código da Carta: %s\n", codigo);
     printf("Número de habitantes: %d\n", pop);
     printf("Número de pontos turísticos: %d\n", pontosT);
     printf("PIB da cidade: %.2f\n", PIB);
+    printf("PIB per Capita da cidade: %.2f\n", PIBC);
+    printf("Densidade Populacional: %.2f\n", densidadeP);
     printf("Área da cidade: %.2f\n", area);
 
 return 0;
