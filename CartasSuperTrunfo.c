@@ -2,129 +2,82 @@
 
 int main() {
 
-    char city[50];
-    char codigo[10];
+    char estado;
+    char código [50];
+    char cidade [50];
     int pop;
-    int pontosT;
+    int pontos;
+    float área;
     float PIB;
-    float area;
-    float superpoder;
-
-    char city2[50];
-    char codigo2[10];
+    
+    char estado2;
+    char código2 [50];
+    char cidade2 [50];
     int pop2;
-    int pontosT2;
+    int pontos2;
+    float área2;
     float PIB2;
-    float area2;
-    float superpoder2;
 
-    printf ("Informe o nome da cidade 1:\n");
-    scanf ("%s", &city);
 
-    printf ("Informe o código da cidade 1 assim como o seguinte modelo: A01\n");
-    scanf ("%s", &codigo);
+    printf("Digite uma letra de A até H para representar o estado:\n");
+    scanf ("%c", &estado);
 
-    printf ("Informe o número de habitantes da cidade 1:\n");
+    printf("Digite o código da carta conforme o modelo A01 usando a letra escolhida anteriormente para o estado:\n");
+    scanf ("%s", &código);
+
+    printf("Digite o nome da cidade:\n");
+    scanf ("%s", &cidade);
+
+    printf("Digite o número de habitantes da cidade:\n");
     scanf ("%d", &pop);
 
-    printf ("Informe o número de pontos turísticos da cidade 1:\n");
-    scanf ("%d", &pontosT);
+    printf("Digite a área da cidade:\n");
+    scanf ("%f", &área);
 
-    printf ("Informe o PIB da cidade 1:\n");
+    printf ("Digite o valor do PIB da cidade:\n");
     scanf ("%f", &PIB);
 
-    printf ("Informe a área da cidade 1:\n");
-    scanf ("%f", &area);
+    printf("Digite o número de pontos turísticos da cidade:\n");
+    scanf ("%d", &pontos);
 
-    float densidadeP = (float) pop / area;
-    float PIBC = (float) PIB / pop;
-    superpoder = (float)pop + (float)pontosT + PIB + area + densidadeP + PIBC;
+    printf("Digite uma letra de A até H para representar o estado 2:\n");
+    scanf ("%c", &estado2);
 
-    printf ("Informe o nome da cidade 2:\n");
-    scanf ("%s", &city2);
+    printf("Digite o código da carta conforme o modelo A01 usando a letra escolhida anteriormente para o estado 2:\n");
+    scanf ("%s", &código2);
 
-    printf ("Informe o código da cidade 2 assim como o seguinte modelo: A01\n");
-    scanf ("%s", &codigo2);
+    printf("Digite o nome da cidade 2:\n");
+    scanf ("%s", &cidade2);
 
-    printf ("Informe o número de habitantes da cidade 2:\n");
+    printf("Digite o número de habitantes da cidade:\n");
     scanf ("%d", &pop2);
 
-    printf ("Informe o número de pontos turísticos da cidade 2:\n");
-    scanf ("%d", &pontosT2);
+    printf("Digite a área da cidade 2:\n");
+    scanf ("%f", &área2);
 
-    printf ("Informe o PIB da cidade 2:\n");
+    printf ("Digite o valor do PIB da cidade 2:\n");
     scanf ("%f", &PIB2);
 
-    printf ("Informe a área da cidade 2:\n");
-    scanf ("%f", &area2);
+    printf("Digite o número de pontos turísticos da cidade 2:\n");
+    scanf ("%d", &pontos2);
 
-    float densidadeP2 = (float) pop2 / area2;
-    float PIBC2 = (float) PIB2 / pop2;
-    superpoder2 = (float)pop2 + (float)pontosT2 + PIB2 + area2 + densidadeP2 + PIBC2;
-      
-if (pop < pop2)
-{
-    printf("A cidade %s tem mais habitantes\n", city2);
+    printf("Carta 1:\n");
+    printf("Estado:%c\n", estado);
+    printf("Código:%s\n", código);
+    printf("Nome da cidade:%s\n", cidade);
+    printf("População:%d\n", pop);
+    printf("Área:%f\n", área);
+    printf("PIB:%f\n", PIB);
+    printf("Estado:%d\n", pontos);
 
-}
-else {
-    printf ("A cidade %s tem mais habitantes\n", city);
-}
-
-if (pontosT < pontosT2)
-{
-    printf("A cidade %s tem mais pontos turísticos\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem mais pontos turísticos\n", city);
-}
-
-if (PIB < PIB2)
-{
-    printf("A cidade %s tem um PIB maior\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem um PIB maior\n", city);
-}
-
-if (PIBC < PIBC2)
-{
-    printf("A cidade %s tem um PIB per capita maior\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem um PIB per capita maior\n", city);
-}
-
-if (densidadeP > densidadeP2)
-{
-    printf("A cidade %s tem uma densidade populacional maior\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem uma densidade populacional maior\n", city);
-}
-
-if (area < area2)
-{
-    printf("A cidade %s tem uma área maior\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem uma área maior\n", city);
-}
-
-if (superpoder < superpoder2)
-{
-    printf("A cidade %s tem um superpoder maior\n", city2);
-
-}
-else {
-    printf ("A cidade %s tem um super poder maior\n", city);
-}
+    printf("Carta 2:\n");
+    printf("Estado:%c\n", estado2);
+    printf("Código:%s\n", código2);
+    printf("Nome da cidade:%s\n", cidade2);
+    printf("População:%d\n", pop2);
+    printf("Área:%f\n", área2);
+    printf("PIB:%f\n", PIB2);
+    printf("Estado:%d\n", pontos2);
 
 
-return 0;
 }
