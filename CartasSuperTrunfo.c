@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-
+// variáveis 
     char estado;
     char codigo [50];
     char cidade [50];
@@ -9,7 +9,7 @@ int main() {
     int pontos;
     float area;
     float PIB;
-    
+ // variáveis 2   
     char estado2;
     char codigo2 [50];
     char cidade2 [50];
@@ -18,7 +18,7 @@ int main() {
     float area2;
     float PIB2;
 
-
+// leitura e armazenamento dos dados
     printf("Digite uma letra de A até H para representar o estado:\n");
     scanf ("%c", &estado);
 
@@ -60,7 +60,7 @@ int main() {
 
     printf("Digite o número de pontos turísticos da cidade:\n");
     scanf ("%d", &pontos2);
-
+// calculo das variáveis
     float densidadeI = (float)area/(float)pop;
     float densidade = (float)pop/(float)area;
     float PIBC = (float)PIB/(float)pop;
@@ -71,7 +71,7 @@ int main() {
 
     float superpoder = (float)pop + (float)pontos + PIB + PIBC + area + densidadeI;
     float superpoder2 = (float)pop2 + (float)pontos2 + PIB2 + PIBC2 + area2 + densidadeI2;
-
+//impressão dos resultados da carta 1
     printf("Carta 1:\n");
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codigo);
@@ -83,7 +83,7 @@ int main() {
     printf("Densidade Populacional: %f hab/Km²\n", densidade);
     printf("PIB per Capita: %f\n", PIBC);
 
-
+// impressão dos resultados da carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -94,7 +94,7 @@ int main() {
     printf("Estado: %d\n", pontos2);
     printf("Densidade Populacional: %f hab/Km²\n", densidade2);
     printf("PIB per Capita: %f\n", PIBC2);
-
+// Comparação dos dados
 printf("\nComparação das Cartas:\n");
 
 if (pop > pop2)
