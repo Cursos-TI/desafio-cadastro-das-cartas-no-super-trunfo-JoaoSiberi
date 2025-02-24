@@ -29,7 +29,7 @@ int main() {
     scanf ("%s", &cidade);
 
     printf("Digite o número de habitantes da cidade:\n");
-    scanf ("%d", &pop);
+    scanf ("%lu", &pop);
 
     printf("Digite a área da cidade:\n");
     scanf ("%f", &area);
@@ -50,7 +50,7 @@ int main() {
     scanf ("%s", &cidade2);
 
     printf("Digite o número de habitantes da cidade:\n");
-    scanf ("%d", &pop2);
+    scanf ("%lu", &pop2);
 
     printf("Digite a área da cidade:\n");
     scanf ("%f", &area2);
@@ -61,13 +61,13 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade:\n");
     scanf ("%d", &pontos2);
 
-    float densidadeI = (float)area/pop;
-    float densidade = (float)pop/area;
-    float PIBC = (float)PIB/pop;
+    float densidadeI = (float)area/(float)pop;
+    float densidade = (float)pop/(float)area;
+    float PIBC = (float)PIB/(float)pop;
 
-    float densidadeI2 = (float)area2/pop2;
-    float densidade2 = (float)pop2/area2;
-    float PIBC2 = (float)PIB2/pop2;
+    float densidadeI2 = (float)area2/(float)pop2;
+    float densidade2 = (float)pop2/(float)area2;
+    float PIBC2 = (float)PIB2/(float)pop2;
 
     float superpoder = (float)pop + (float)pontos + PIB + PIBC + area + densidadeI;
     float superpoder2 = (float)pop2 + (float)pontos2 + PIB2 + PIBC2 + area2 + densidadeI2;
@@ -76,7 +76,7 @@ int main() {
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codigo);
     printf("Nome da cidade: %s\n", cidade);
-    printf("População: %d\n", pop);
+    printf("População: %lu\n", pop);
     printf("Área: %f Km²\n", area);
     printf("PIB: %f\n", PIB);
     printf("Estado: %d\n", pontos);
@@ -88,20 +88,22 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da cidade: %s\n", cidade2);
-    printf("População: %d\n", pop2);
+    printf("População: %lu\n", pop2);
     printf("Área: %f Km²\n", area2);
     printf("PIB: %f\n", PIB2);
     printf("Estado: %d\n", pontos2);
     printf("Densidade Populacional: %f hab/Km²\n", densidade2);
     printf("PIB per Capita: %f\n", PIBC2);
 
+printf("\nComparação das Cartas:\n");
+
 if (pop > pop2)
 {
-    printf("\nPopulação: Carta 1 venceu (1)\n");
+    printf("População: Carta 1 venceu (1)\n");
 }
 else 
 {
-    printf("\nPopulação: Carta 2 venceu (0)\n");
+    printf("População: Carta 2 venceu (0)\n");
 }
 if (area > area2)
 {
